@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;;
+}
+
+body{
+    background-color: lightgray;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+/* The top nav bar */
+#navbar {
+    position: relative;
+    top: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 11vh;
+    background-color: black;
+    align-items: center;
+}
+
+#navbar a{
+    text-decoration: none;
+}
+
+/* side logo to open side section */
+.side-section{
+    color: gray;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo{
+    color: white;
+    font-size: 40px;
+}
+
+#total-counter {
+    padding: 5px;
+}
+
+
+#toggle-sidebar:hover {
+    scale: 1.2;
+    transition: .2s all ease-in-out;
+}
+
+
+
+/* styling for main  */
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* styling for search and display area */
+.main {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.search-section{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-section h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+#searcher{
+    height: 30px;
+    border-radius: 10px;
+    width: 30%;
+    padding-left: 10px;
+    background-color: black;
+    color: white;
+}
+
+.card-container{
+    height: 62vh;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.card{
+    border: 2px solid black;
+    height: 320px;
+    width: 200px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    padding-top: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.card img {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.card h3 {
+    height: 60px;
+    margin: 10px;
+}
+
+.cardFooter {
+    position: relative;
+    bottom: -9px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 55px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.cardFooter button {
+    height: 35px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.cardFooter i {
+    font-size: 20px;
+    transform: 0.2s linear;
+}
+
+.cardFooter i:hover {
+    font-size: 27px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px black;
+}
+/* styling for area where all the favoutie recipes shows up */
+
+aside {
+    background-color: azure;
+    transition: all ease-in-out 0.5s;
+    text-align: center;
+    height: 89vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 10;
+}
+
+.heading{
+    position: relative;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    /* background-color: bisque; */
+    height: 9vh;
+}
+
+.favContainer {
+    height: 80vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.favCard{
+    height: 160px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.favCard img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 3px black;
+}
+
+.mealInfo{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mealInfo h2 {
+    height: 80px;
+    font-size: 25px;
+}
+
+.mealFooter{
+    height: 60px;
+    position: relative;
+    bottom: -15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#moreDetails p{
+    border: 1px solid black;
+    height: 25px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.favCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px black;
+}
+
+#favButton i{
+    transition: 0.2s ease-in-out;
+}
+#favButton i:hover {
+    transform: scale(1.3);
+}
+
+
+
+
+/* the individual card displsy */
+
+.individual {
+    position: absolute;
+    bottom: 0;
+    height: 89vh;
+    width: 100%;
+    background-color: lightgray;
+    z-index: 2;
+}
+
+.bigMealCard{
+    position: relative;
+    height: 70%;
+    width: 70%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px black;
+    top: 10%;
+    left: 15%;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.bigMealInfo{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bigMealInfo img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px black;
+    margin: 30px;
+}
+
+.instructions{
+    height: 44%;
+    overflow: scroll;
+}
+
+.instructions h3{
+    padding-left: 10px;
+    /* padding-top: 10px; */
+    font-size: 30px;
+}
+
+.morefunctions{
+    position: relative;
+    bottom: 0;
+    height: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+    padding: 10px;
+}
+
+.morefunctions button{
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+} 
+
+.morefunctions button:hover {
+    box-shadow: 0px 5px 10px gray;
+}
